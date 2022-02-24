@@ -17,7 +17,7 @@ h4,
 h5,
 h6,
 p {
-    margin-top: o;
+    margin-top: 0;
     margin-bottom: 0;
 }
 ul {
@@ -27,6 +27,8 @@ ul {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .list {
     list-style: none;
@@ -46,17 +48,19 @@ img {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
 }
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
 }
 .nav-list {
     display: flex;
     align-items: center;
 }
 .header-contact {
+    margin-left: auto;
     display: flex;
 }
 .nav-list-item:not(:last-child) {
@@ -85,12 +89,14 @@ img {
 .nav-list-link:focus {
     color: var(--accent-color);
 }
+.contact-mail-block {
+    margin-right: 50px;
+}
 .contact-mail {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin-right: 50px;
     color: var( --secondary-text-color-light);
 }
 .contact-mail:hover,
@@ -140,20 +146,23 @@ img {
     text-transform: uppercase;
     color: var(--secondary-text-color-dark);   
 }
-.feature {
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+.pane {
+    display: none;
+}
 .benefits {
     display: flex;
-    flex-basis: calc((100%-120px)/4);
+    flex-basis: calc((100% - 90px) / 4);
 }
 .benefits-block:not(:last-child) {
     margin-right: 30px;
 
 }
 .benefits-list {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -167,6 +176,9 @@ img {
     letter-spacing: 0.03em;
     color: var( --secondary-text-color-light);
 }
+.about-section {
+    padding-top: 0px;
+}
 .about {
     text-align: center;
     margin-bottom: 50px;
@@ -178,10 +190,7 @@ img {
 }
 .about-item {
     display: flex;
-    flex-basis: calc((100%-90px)/3);
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-basis: calc((100% - 60px) / 3);
 }
 .box:not(:last-child) {
     margin-right: 30px;
@@ -193,7 +202,6 @@ img {
     
 }
 .team {
-    margin-top: 94px;
     margin-bottom: 50px;
     text-align: center;
     font-weight: 700;
@@ -206,18 +214,19 @@ img {
     display: flex;
     margin-left: -30px;
     margin-top: -30px;
-
-
 }
 .team-card {
-    flex-basis: calc((100%-120px)/4);
+    flex-basis: calc((100% - 120px) / 4);
     margin-left: 30px;
     margin-top: 30px;
     background-color: #FFFFFF;
 }
+.worker {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .name {
     text-align: center;
-    margin-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -233,6 +242,7 @@ img {
     color: var( --secondary-text-color-light);
 }
 .logo-footer {
+    
     font-family: var(--secondary-font-family);
     font-weight: 700;
     font-size: 26px;
@@ -241,7 +251,7 @@ img {
     color: var(--secondary-text-color-dark);
 }
 .footer {
-    margin-top: 94px;
+    padding-bottom: 60px;
     padding-top: 60px;
     background-color: #2F303A;
 }
@@ -250,10 +260,11 @@ img {
 }
 .footer-list {
     margin-top: 20px;
-    padding-bottom: 60px;
+}
+.about-footer:not(:last-child) {
+    margin-bottom: 9px;
 }
 .adres {
-    
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -278,9 +289,8 @@ img {
     opacity: 0.6;
 }
 /* portfolio works */
-.portfolio {
-    margin-top: 94px;
-}
+
+
 .portfolio-list {
     display: flex;
     justify-content: center;
@@ -307,17 +317,24 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
-    margin-top: 34px;
+    margin-top: 50px;
+    margin-bottom: -30px;
     
 }
 .project-group {
     
     margin-left: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }   
+.group {
+   padding: 20px 24px;
+   border-bottom: 1px solid #eeeeee;
+   border-left: 1px solid #eeeeee;
+   border-right: 1px solid #eeeeee;
 
+}
 .works {
-    margin: 20px 24px 4px;
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -325,12 +342,11 @@ img {
     color: var(--primery-text-color);
 }
 .works-item {
-    margin: 4px 24px 20px;
+    
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var( --secondary-text-color-light);
-}
 }
 /* portfolio footer */
 .adres:hover,
